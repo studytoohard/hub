@@ -114,6 +114,8 @@
     
       <category term="MongoDB" scheme="https://tuture.co/tags/MongoDB/"/>
     
+      <category term="Express" scheme="https://tuture.co/tags/Express/"/>
+    
   </entry>
   
   <entry>
@@ -127,7 +129,7 @@
     
     <summary type="html">
     
-      在这篇教程中，我们将用 Node.js 中最流行的 Express 框架搭建一个类似 Instagram 的图片分享社区，数据库选用 MongoDB。本教程的代码改编自 Mithun Satheesh，Bruno Joseph D&#39;mello 和 Jason Krol 的《Web Development with MongoDB and NodeJS: Second Edition》一书。
+      Node.js 已经成为服务器端开发的主流选择之一，而 Express 则是 Node 平台最耀眼的那个框架。在这篇教程中，我们将用 Node.js 中最流行的 Express 框架搭建一个类似 Instagram 的图片分享社区，数据库选用 当今颇受欢迎的非关系型数据库 MongoDB。本教程的代码改编自 Mithun Satheesh，Bruno Joseph D&#39;mello 和 Jason Krol 的《Web Development with MongoDB and NodeJS: Second Edition》一书。
     
     </summary>
     
@@ -136,6 +138,8 @@
       <category term="Node" scheme="https://tuture.co/tags/Node/"/>
     
       <category term="MongoDB" scheme="https://tuture.co/tags/MongoDB/"/>
+    
+      <category term="Express" scheme="https://tuture.co/tags/Express/"/>
     
   </entry>
   
