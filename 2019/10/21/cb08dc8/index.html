@@ -61,7 +61,7 @@
 </script>
 
   <meta name="description" content="这是本教程的第二个部分，使用 Node.js 的 Express 路由框架来编写我们迷你淘宝的 API 后台部分，在这个教程中，你将学到一个基础的 Web 后台 API 应用如何搭建，包括中间件、路由等，如何通过 Node.js 数据库接口包操作 MongoDB 数据库，并且通过 Postman 来测试我们写好的 API。">
-<meta name="keywords" content="JavaScript,Node,Vue,MongoDB">
+<meta name="keywords" content="JavaScript,Vue,Node,MongoDB">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用 Vue 和 Node 开发一个迷你淘宝(二)">
 <meta property="og:url" content="https://tuture.co/2019/10/21/cb08dc8/index.html">
@@ -558,20 +558,6 @@
               <span id="busuanzi_value_page_pv"></span>
             </span>
           
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2019/10/21/cb08dc8/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2019/10/21/cb08dc8/" itemprop="commentCount"></span></a>
-  </span>
-  
-  
           <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
@@ -796,9 +782,9 @@
             
               <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
             
-              <a href="/tags/Node/" rel="tag"><i class="fa fa-tag"></i> Node</a>
-            
               <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
+            
+              <a href="/tags/Node/" rel="tag"><i class="fa fa-tag"></i> Node</a>
             
               <a href="/tags/MongoDB/" rel="tag"><i class="fa fa-tag"></i> MongoDB</a>
             
@@ -837,7 +823,7 @@
           </div>
           
     
-    <div class="comments" id="comments"></div>
+    <div class="comments" id="gitalk-container"></div>
   
 
         </div>
@@ -1033,29 +1019,23 @@
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
-NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', () => {
-  var GUEST = ['nick', 'mail', 'link'];
-  var guest = 'nick,mail,link';
-  guest = guest.split(',').filter(item => {
-    return GUEST.includes(item);
-  });
-  new Valine({
-    el: '#comments',
-    verify: false,
-    notify: true,
-    appId: 'YNUBNSPGxBaXOi74pCWOehF0-gzGzoHsz',
-    appKey: '453h4sqSi12KyOOQr3d5QFPR',
-    placeholder: '写下你的评论',
-    avatar: 'mm',
-    meta: guest,
-    pageSize: '10' || 10,
-    visitor: false,
-    lang: '' || 'zh-cn',
-    path: location.pathname
-  });
-}, window.Valine);
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '6310753ce4e95163d2b0',
+      clientSecret: '4fd6839b697f9d50e01eebbb9566d8bdf3bd75b4',
+      repo: 'comments',
+      owner: 'tuture-dev',
+      admin: 'pftom,mRcfps,tuture-dev'.split(','),
+      id: '34b0349493ab396ecc5cf7431a7b9566',
+        language: 'zh-CN',
+      
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
 </script>
 
 

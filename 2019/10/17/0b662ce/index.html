@@ -61,7 +61,7 @@
 </script>
 
   <meta name="description" content="Vue 是尤雨溪在2014年创建的一个前端框架，目前 Github Star 数高达150K，是 Star 数最高的前端项目，并且 Vue 有着极为活跃的社区生态以及专职团队进行维护以确保项目可以健康长久的发展。 目前中国很多互联网公司前端程序员的招聘要求都要求程序员掌握 Vue，像滴滴、美团、饿了么等大厂也在重度使用 Vue 进行开发，并且有着像 Element 、mpvue、iView 这样优">
-<meta name="keywords" content="JavaScript,Node,Vue,MongoDB">
+<meta name="keywords" content="JavaScript,Vue,Node,MongoDB">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用 Vue 和 Node 开发一个迷你淘宝(一)">
 <meta property="og:url" content="https://tuture.co/2019/10/17/0b662ce/index.html">
@@ -558,20 +558,6 @@
               <span id="busuanzi_value_page_pv"></span>
             </span>
           
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-        
-      
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2019/10/17/0b662ce/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2019/10/17/0b662ce/" itemprop="commentCount"></span></a>
-  </span>
-  
-  
           <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
@@ -867,9 +853,9 @@
             
               <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
             
-              <a href="/tags/Node/" rel="tag"><i class="fa fa-tag"></i> Node</a>
-            
               <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
+            
+              <a href="/tags/Node/" rel="tag"><i class="fa fa-tag"></i> Node</a>
             
               <a href="/tags/MongoDB/" rel="tag"><i class="fa fa-tag"></i> MongoDB</a>
             
@@ -912,7 +898,7 @@
           </div>
           
     
-    <div class="comments" id="comments"></div>
+    <div class="comments" id="gitalk-container"></div>
   
 
         </div>
@@ -1108,29 +1094,23 @@
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
 
 <script>
-NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', () => {
-  var GUEST = ['nick', 'mail', 'link'];
-  var guest = 'nick,mail,link';
-  guest = guest.split(',').filter(item => {
-    return GUEST.includes(item);
-  });
-  new Valine({
-    el: '#comments',
-    verify: false,
-    notify: true,
-    appId: 'YNUBNSPGxBaXOi74pCWOehF0-gzGzoHsz',
-    appKey: '453h4sqSi12KyOOQr3d5QFPR',
-    placeholder: '写下你的评论',
-    avatar: 'mm',
-    meta: guest,
-    pageSize: '10' || 10,
-    visitor: false,
-    lang: '' || 'zh-cn',
-    path: location.pathname
-  });
-}, window.Valine);
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '6310753ce4e95163d2b0',
+      clientSecret: '4fd6839b697f9d50e01eebbb9566d8bdf3bd75b4',
+      repo: 'comments',
+      owner: 'tuture-dev',
+      admin: 'pftom,mRcfps,tuture-dev'.split(','),
+      id: '27a0297159a0269d4ff7ed66653f6831',
+        language: 'zh-CN',
+      
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
 </script>
 
 

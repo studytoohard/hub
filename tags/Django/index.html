@@ -765,30 +765,6 @@
   
 
 
-<script>
-NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', () => {
-  var GUEST = ['nick', 'mail', 'link'];
-  var guest = 'nick,mail,link';
-  guest = guest.split(',').filter(item => {
-    return GUEST.includes(item);
-  });
-  new Valine({
-    el: '#comments',
-    verify: false,
-    notify: true,
-    appId: 'YNUBNSPGxBaXOi74pCWOehF0-gzGzoHsz',
-    appKey: '453h4sqSi12KyOOQr3d5QFPR',
-    placeholder: '写下你的评论',
-    avatar: 'mm',
-    meta: guest,
-    pageSize: '10' || 10,
-    visitor: false,
-    lang: '' || 'zh-cn',
-    path: location.pathname
-  });
-}, window.Valine);
-</script>
-
 
   <script>
     const line = document.getElementsByClassName('line');
